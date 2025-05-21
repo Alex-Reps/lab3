@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/lab_java_2</property>
+        <property name="hibernate.connection.username">lab_tester</property>
+        <property name="hibernate.connection.password">lab_tester</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">false</property>
+        <mapping class="com.library.entity.Book"/>
+        <mapping class="com.library.entity.User"/>
+        <mapping class="com.library.entity.Issue"/>
+    </session-factory>
+</hibernate-configuration>
+
